@@ -1,0 +1,43 @@
+[
+    {
+        "Id": 1,
+        "CompanyLogo": "https://images.unsplash.com/photo-1620327445287-1bb761ae1e5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        "Position" : "Tech Lead",
+        "CompanyName": "Apralactina",
+        "JobType": "Remote",
+        "Location": "NewYork, USA",
+        "Salary":  "100k -150k"
+        
+    },
+    {
+        "Id": 2,
+        "CompanyLogo": "https://images.unsplash.com/photo-1567848117389-76f5a6d955ae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80",
+        "Position" : "Intern",
+        "CompanyName": "NBC",
+        "JobType": "Onsite",
+        "Location": "NewYork, USA",
+        "Salary":  "100k -150k"
+
+        
+    },
+    {
+        "Id": 3,
+        "CompanyLogo": "https://images.unsplash.com/photo-1628601157101-82459354dfdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        "Position" : "Junior Developer",
+        "CompanyName": "Canon",
+        "JobType": "Remote",
+        "Location": "NewYork, USA",
+        "Salary":  "100k -150k"
+        
+    },
+    {
+        "Id": 4,
+        "CompanyLogo": "https://images.unsplash.com/photo-1496200186974-4293800e2c20?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1332&q=80",
+        "Position" : "Bug Hunter",
+        "CompanyName": "slack",
+        "JobType": "Onsite",
+        "Location": "NewYork, USA",
+        "Salary":  "100k -150k"
+
+    }
+]

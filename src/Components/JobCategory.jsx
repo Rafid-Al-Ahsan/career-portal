@@ -44,7 +44,7 @@ function Cards(props){
         {/* Card Component */}
         <div className="card w-60 shadow-xl mt-10 mx-1 items-start">
             <figure className="pt-10 px-9">
-                <img src={props.info.image} alt="Shoes" className="rounded-[50%] w-20 h-20" />
+                <img src={props.info.image} alt="" className="rounded-[50%] w-20 h-20" />
             </figure>
 
             <div className="card-body">

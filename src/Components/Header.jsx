@@ -7,7 +7,7 @@ const Header = () => {
             
         <div className=' w-5/6 m-auto py-5 flex items-center'>
             <div className='w-1/3 font-extrabold text-2xl'> 
-                <h3>CareerPortal</h3>
+                <h3 className='text-black'>CareerPortal</h3>
             </div>
             <div className='w-1/3 flex justify-center gap-12 list-none '>
                 <a href='' className='hover:text-[#7E90FE]'>Statistics</a>
