@@ -28,6 +28,10 @@ const FeaturedJobs = () => {
            <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-7 mt-10'>
               {featuredJobs.map(job => <Card key={job.Id} featuredJob={job}></Card>)}
            </div>
+
+           <div className='text-center mt-5'>
+                <button className="btn bg-[#7E90FE] text-white border-0 mt-3">See All Jobs</button>
+            </div>
            
         </div>           
        </div>
@@ -52,7 +56,7 @@ function Card(props){
                 </div>
                 
                 <div className="card-actions">
-                <button className="btn bg-[#7E90FE] text-white border-0 mt-3">View Details</button>
+                    <button className="btn bg-[#7E90FE] text-white border-0 mt-3">View Details</button>
                 </div>
             </div>
         </div>
