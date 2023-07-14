@@ -31,7 +31,7 @@ const FeaturedJobs = () => {
            </div>
 
            <div className='text-center mt-5'>
-                <button className="btn bg-secondary text-white border-0 mt-3">See All Jobs</button>
+                <button className="btn bg-gradient-to-r from-gradient1 to-gradient2 text-white border-0 mt-3">See All Jobs</button>
             </div>
            
         </div>           
@@ -57,7 +57,7 @@ function Card(props){
                 </div>
                 
                 <div className="card-actions">
-                    <button className="btn bg-secondary text-white border-0 mt-3"><Link to="Jobdetails">View Details</Link></button>
+                    <button className="btn bg-gradient-to-r from-gradient1 to-gradient2 text-white border-0 mt-3"><Link to="Jobdetails">View Details</Link></button>
                 </div>
             </div>
         </div>

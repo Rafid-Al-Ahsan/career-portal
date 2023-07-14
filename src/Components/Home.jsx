@@ -17,7 +17,7 @@ const Home = () => {
                     <div className='w-2/3 text-[#757575]'>
                         <p className='my-5'>If you are looking for a job look nowwhere else. Applying through our easy to use website and secure a interview, so what are you waiting for!
                         </p>
-                        <button className='bg-secondary p-3 text-[#fff] rounded-[4%] mb-5 md:mb-0'>Get Started</button>
+                        <button className='bg-gradient-to-r from-gradient1 to-gradient2 p-3 text-[#fff] rounded-[4%] mb-5 md:mb-0'>Get Started</button>
                     </div>
                 </div>
 

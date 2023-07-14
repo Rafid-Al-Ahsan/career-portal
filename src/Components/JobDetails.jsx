@@ -2,7 +2,11 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import { faDollarSign} from '@fortawesome/free-solid-svg-icons';
+import { faPhone} from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope} from '@fortawesome/free-solid-svg-icons';
+import { faLocation} from '@fortawesome/free-solid-svg-icons';
+import { faCalendar} from '@fortawesome/free-solid-svg-icons';
 
 const JobDetails = () => {
     return (
@@ -29,18 +33,18 @@ const JobDetails = () => {
              
              <div>
 
-                <div className='bg-[#d2d8fe]'>
+                <div className='bg-[#e6e9ff]'>
                     <div className='w-5/6 m-auto flex flex-col gap-3 py-5'>
                         <h3 className='font-bold text-lg text-black'>Job Details</h3>
                         <hr className='border-primary'/>
                         <p className='text-black'><FontAwesomeIcon icon={faDollarSign} className='text-secondary'/> <span className='font-semibold'>Salary: </span> Lorem ipsum dolor sit amet.</p>
-                        <p className='text-black'><FontAwesomeIcon icon={faDollarSign} className='text-secondary'/> <span className='font-semibold'>Job Tiltle: </span> Lorem ipsum dolor sit amet.</p>
+                        <p className='text-black'><FontAwesomeIcon icon={faCalendar} className='text-secondary'/> <span className='font-semibold'>Job Tiltle: </span> Lorem ipsum dolor sit amet.</p>
 
                         <h3 className='font-bold text-lg text-black mt-3'>Contact Information</h3>
                         <hr className='border-primary'/>
-                        <p className='text-black'><FontAwesomeIcon icon={faDollarSign} className='text-secondary'/> <span className='font-semibold'>Phone: </span> Lorem ipsum dolor sit amet.</p>
-                        <p className='text-black'><FontAwesomeIcon icon={faDollarSign} className='text-secondary'/> <span className='font-semibold'>Email: </span> Lorem ipsum dolor sit amet.</p>
-                        <p className='text-black'><FontAwesomeIcon icon={faDollarSign} className='text-secondary'/> <span className='font-semibold'>Address: </span> Lorem ipsum dolor sit amet.</p>
+                        <p className='text-black'><FontAwesomeIcon icon={faPhone} className='text-secondary'/> <span className='font-semibold'>Phone: </span> Lorem ipsum dolor sit amet.</p>
+                        <p className='text-black'><FontAwesomeIcon icon={faEnvelope} className='text-secondary'/> <span className='font-semibold'>Email: </span> Lorem ipsum dolor sit amet.</p>
+                        <p className='text-black'><FontAwesomeIcon icon={faLocation} className='text-secondary'/> <span className='font-semibold'>Address: </span> Lorem ipsum dolor sit amet.</p>
                     </div>
                     
              </div>
