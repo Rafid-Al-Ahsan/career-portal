@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const FeaturedJobs = () => {
 
@@ -30,7 +31,7 @@ const FeaturedJobs = () => {
            </div>
 
            <div className='text-center mt-5'>
-                <button className="btn bg-[#7E90FE] text-white border-0 mt-3">See All Jobs</button>
+                <button className="btn bg-secondary text-white border-0 mt-3">See All Jobs</button>
             </div>
            
         </div>           
@@ -48,7 +49,7 @@ function Card(props){
             <div className="card-body">
                 <h2 className="card-title text-black font-bold">{props.featuredJob.Position}</h2>
                 <p>{props.featuredJob.CompanyName}</p>
-                <p className='border-solid border-2 border-[#7E90FE] text-[#7E90FE] w-20 text-center py-2 my-2'>{props.featuredJob.JobType}</p>
+                <p className='border-solid border-2 border-secondary text-secondary w-20 text-center py-2 my-2'>{props.featuredJob.JobType}</p>
 
                 <div className='flex gap-5'>
                     <p><FontAwesomeIcon icon={faLocationDot} /> {props.featuredJob.Location}</p>
@@ -56,7 +57,7 @@ function Card(props){
                 </div>
                 
                 <div className="card-actions">
-                    <button className="btn bg-[#7E90FE] text-white border-0 mt-3">View Details</button>
+                    <button className="btn bg-secondary text-white border-0 mt-3"><Link to="Jobdetails">View Details</Link></button>
                 </div>
             </div>
         </div>
