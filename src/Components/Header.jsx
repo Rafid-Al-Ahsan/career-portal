@@ -12,8 +12,8 @@ const Header = () => {
             </div>
             <div className='w-1/3 flex md:flex-row flex-col  justify-center md:gap-12 gap-4 list-none '>
                 <Link to="" className='hover:text-secondary'>Home</Link>
-                <Link to="" className='hover:text-secondary'>Applied-Jobs</Link>
-                <Link to="" className='hover:text-secondary'>Statistics</Link>
+                <Link to="AppliedJobs" className='hover:text-secondary'>Applied-Jobs</Link>
+                <Link to="Statistics" className='hover:text-secondary'>Statistics</Link>
                 <Link to="" className='hover:text-secondary'>Blogs</Link>
             </div>
             <div className='w-1/3 md:text-center md:flex md:justify-end mt-5 md:mt-0'>

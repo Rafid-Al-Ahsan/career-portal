@@ -1,14 +1,21 @@
+/* eslint-disable no-undef */
 
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDollarSign} from '@fortawesome/free-solid-svg-icons';
 import { faPhone} from '@fortawesome/free-solid-svg-icons';
 import { faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import { faLocation} from '@fortawesome/free-solid-svg-icons';
 import { faCalendar} from '@fortawesome/free-solid-svg-icons';
+import { useContext } from 'react';
+import { JobInformation } from './FeaturedJobs';
+
 
 const JobDetails = () => {
+
+
+
     return (
 
         <div className='w-full'>

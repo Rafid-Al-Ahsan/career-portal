@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
 import {
   createBrowserRouter,
@@ -8,19 +7,30 @@ import {
 } from "react-router-dom";
 import JobDetails from './Components/JobDetails.jsx';
 import Container from './Components/Container.jsx';
+import AppliedJobs from './Components/AppliedJobs.jsx';
+import Statistics from './Components/Statistics.jsx';
+import Root from './Components/root.jsx';
 
-const router = createBrowserRouter([
+const router =createBrowserRouter([
     {
       path: "/",
       element: <Container></Container>,
         children:[
             {
               path: "/",
-              element: <App/>
+              element: <Root></Root>
             },
             {
               path: "Jobdetails",
               element: <JobDetails></JobDetails> 
+            },
+            {
+              path: "Appliedjobs",
+              element: <AppliedJobs></AppliedJobs>
+            },
+            {
+              path: "Statistics",
+              element: <Statistics></Statistics>
             }
 
         ]

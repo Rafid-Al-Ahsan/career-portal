@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
@@ -5,10 +6,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import { createContext } from 'react';
+import App from '../App';
+import JobDetails from './JobDetails';
 
-const FeaturedJobs = () => {
+export const JobInformation = createContext(null);
+
+const FeaturedJobs = (props) => {
 
     const [featuredJobs,setFeaturedJobs] = useState([]);
+    
+    // console.log(props);
+
+ 
+    
+ 
+
 
     useEffect(() => {
         fetch('featuredjobs.json')
@@ -17,8 +30,12 @@ const FeaturedJobs = () => {
     }, [])
 
     return (
-        <div className='mt-16 w-full'>
+       
 
+        <div className='mt-16 w-full'>
+            
+
+            
         <div className='w-5/6 m-auto'>
               {/*For Title and subtitle  */}
           <div className='text-center'>
@@ -27,20 +44,32 @@ const FeaturedJobs = () => {
           </div>
            
            <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-7 mt-10'>
-              {featuredJobs.map(job => <Card key={job.Id} featuredJob={job}></Card>)}
+              {featuredJobs.map(job => <Card key={job.Id} featuredJob={job} details={props}></Card>)}
            </div>
 
            <div className='text-center mt-5'>
                 <button className="btn bg-gradient-to-r from-gradient1 to-gradient2 text-white border-0 mt-3">See All Jobs</button>
             </div>
            
-        </div>           
+        </div>    
+
+          {/* <jobDetails.Provider value={[featuredJobs]}></jobDetails.Provider>        */}
+          
        </div>
     );
 };
 
 function Card(props){
-    console.log(props.featuredJob);
+
+     const Details = props.details;
+
+     function Display(props) {
+        
+        <JobDetails k={props}></JobDetails>
+    }
+
+
+
     return(
         <div className="card w-full shadow-xl items-start">
             <figure className="px-10 pt-10">
@@ -57,11 +86,16 @@ function Card(props){
                 </div>
                 
                 <div className="card-actions">
-                    <button className="btn bg-gradient-to-r from-gradient1 to-gradient2 text-white border-0 mt-3"><Link to="Jobdetails">View Details</Link></button>
+                    <Link to="Jobdetails" ><button onClick={() => Display(props)} className="btn bg-gradient-to-r from-gradient1 to-gradient2 text-white border-0 mt-3 ">View Details</button></Link>
                 </div>
             </div>
         </div>
     )
 }
 
+
+
 export default FeaturedJobs;
+
+
+
