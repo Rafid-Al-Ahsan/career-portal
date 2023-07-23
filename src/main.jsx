@@ -9,7 +9,8 @@ import JobDetails from './Components/JobDetails.jsx';
 import Container from './Components/Container.jsx';
 import AppliedJobs from './Components/AppliedJobs.jsx';
 import Statistics from './Components/Statistics.jsx';
-import Root from './Components/root.jsx';
+import Blogs from './Components/Blogs';
+import App from './App';
 
 const router =createBrowserRouter([
     {
@@ -18,10 +19,10 @@ const router =createBrowserRouter([
         children:[
             {
               path: "/",
-              element: <Root></Root>
+              element: <App />
             },
             {
-              path: "Jobdetails",
+              path: "Jobdetails/:id",
               element: <JobDetails></JobDetails> 
             },
             {
@@ -31,6 +32,10 @@ const router =createBrowserRouter([
             {
               path: "Statistics",
               element: <Statistics></Statistics>
+            },
+            {
+              path: "Blogs",
+              element: <Blogs></Blogs>
             }
 
         ]
@@ -40,6 +45,9 @@ const router =createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <div>
+      <RouterProvider router={router} />
+    </div>
+    
   </React.StrictMode>,
 )

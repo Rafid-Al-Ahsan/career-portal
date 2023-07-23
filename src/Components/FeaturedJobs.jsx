@@ -1,26 +1,18 @@
 /* eslint-disable no-undef */
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import { createContext } from 'react';
-import App from '../App';
-import JobDetails from './JobDetails';
 
-export const JobInformation = createContext(null);
 
 const FeaturedJobs = (props) => {
 
     const [featuredJobs,setFeaturedJobs] = useState([]);
     
     // console.log(props);
-
- 
-    
- 
 
 
     useEffect(() => {
@@ -61,15 +53,6 @@ const FeaturedJobs = (props) => {
 
 function Card(props){
 
-     const Details = props.details;
-
-     function Display(props) {
-        
-        <JobDetails k={props}></JobDetails>
-    }
-
-
-
     return(
         <div className="card w-full shadow-xl items-start">
             <figure className="px-10 pt-10">
@@ -86,12 +69,15 @@ function Card(props){
                 </div>
                 
                 <div className="card-actions">
-                    <Link to="Jobdetails" ><button onClick={() => Display(props)} className="btn bg-gradient-to-r from-gradient1 to-gradient2 text-white border-0 mt-3 ">View Details</button></Link>
+                    <Link to={`Jobdetails/${props.featuredJob.Id}`} ><button  className="btn bg-gradient-to-r from-gradient1 to-gradient2 text-white border-0 mt-3 ">View Details</button></Link>
                 </div>
             </div>
+           
         </div>
     )
 }
+
+
 
 
 

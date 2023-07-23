@@ -1,25 +1,18 @@
 /* eslint-disable no-unused-vars */
-import './App.css'
-import FeaturedJobs from './Components/FeaturedJobs'
-import Home from './Components/Home'
-import JobCategory from './Components/JobCategory'
+import React from 'react';
+import FeaturedJobs from './Components/FeaturedJobs';
+import JobCategory from './Components/JobCategory';
+import Home from './Components/Home';
+
 
 
 function App() {
-
-  // const [job, setJob] = useState([]);
-
-  const ViewDetails = () => {
-     console.log('HI');
-      
-     
-  };
 
   return (
      <div>
          <Home></Home>
          <JobCategory></JobCategory>
-         <FeaturedJobs Details={ViewDetails()}></FeaturedJobs>
+         <FeaturedJobs></FeaturedJobs>
      </div>
   )
 }

@@ -6,7 +6,16 @@
         "CompanyName": "Apralactina",
         "JobType": "Remote",
         "Location": "NewYork, USA",
-        "Salary":  "100k -150k"
+        "Salary":  "100k -150k",
+        "Phone": "+880 67853214",
+        "Email": "robin@techlead.com",
+
+
+        "JobDescription": "Give assitance and direction to the development team. Bring around invation and changes",
+        "JobResponsibility" : "Write code and lead the team",
+        "Education": "BSc/ MSc in any Software of Computer Revelant fields",
+        "Experience": "Minimum 5 years of experinece in the software development Industry"
+
         
     },
     {
@@ -16,7 +25,14 @@
         "CompanyName": "NBC",
         "JobType": "Onsite",
         "Location": "NewYork, USA",
-        "Salary":  "100k -150k"
+        "Salary":  "100k -150k",
+        "Phone": "+880 83642345",
+        "Email": "willam@nbc.com",
+
+        "JobDescription": "Prepare documentaton life cycles of the current system",
+        "JobResponsibility" : "Check the documation and be of assistance to the company",
+        "Education": "Should be in last semester of BSc in CSE/CS or complted BSc",
+        "Experience": "No Experience Required. Freshers are encouraged to Apply."
 
         
     },
@@ -27,7 +43,15 @@
         "CompanyName": "Canon",
         "JobType": "Remote",
         "Location": "NewYork, USA",
-        "Salary":  "100k -150k"
+        "Salary":  "100k -150k",
+        "Phone": "+880 27373321",
+        "Email": "nafis@canon.com",
+
+
+        "JobDescription": "Develop and maintain beautiful UI's using React or Vue",
+        "JobResponsibility" : "Take figma and PSD files and covert thme to clean code",
+        "Education": "BSc in CSE/CS or Diploma in Computer Science",
+        "Experience": "1 year of experience with React is prefered. Freshers may also Apply."
         
     },
     {
@@ -37,7 +61,15 @@
         "CompanyName": "slack",
         "JobType": "Onsite",
         "Location": "NewYork, USA",
-        "Salary":  "100k -150k"
+        "Salary":  "100k -150k",
+        "Phone": "+880 73643456",
+        "Email": "jones@slack.com",
+
+
+        "JobDescription": "Fix bugs after every update. Collect bug report from users and fix them as early as possible",
+        "JobResponsibility" : "Find all errors and bugs with the system",
+        "Education": "BSc in CSE/CS or Diploma in Computer Science",
+        "Experience": "Atleast 2 years of experience with Software Testing and Quality Assurance"
 
     }
 ]

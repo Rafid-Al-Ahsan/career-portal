@@ -14,7 +14,7 @@ const Header = () => {
                 <Link to="" className='hover:text-secondary'>Home</Link>
                 <Link to="AppliedJobs" className='hover:text-secondary'>Applied-Jobs</Link>
                 <Link to="Statistics" className='hover:text-secondary'>Statistics</Link>
-                <Link to="" className='hover:text-secondary'>Blogs</Link>
+                <Link to="Blogs" className='hover:text-secondary'>Blogs</Link>
             </div>
             <div className='w-1/3 md:text-center md:flex md:justify-end mt-5 md:mt-0'>
                 <button className='bg-gradient-to-r from-gradient1 to-gradient2 p-3 text-[#fff] rounded-[8%]'>Start Applying</button>
