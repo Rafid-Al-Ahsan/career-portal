@@ -11,6 +11,7 @@ import AppliedJobs from './Components/AppliedJobs.jsx';
 import Statistics from './Components/Statistics.jsx';
 import Blogs from './Components/Blogs';
 import App from './App';
+import NotFound from './Components/NotFound';
 
 const router =createBrowserRouter([
     {
@@ -36,6 +37,10 @@ const router =createBrowserRouter([
             {
               path: "Blogs",
               element: <Blogs></Blogs>
+            },
+            {
+              path: "*",
+              element: <NotFound></NotFound>
             }
 
         ]
