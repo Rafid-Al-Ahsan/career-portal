@@ -71,5 +71,41 @@
         "Education": "BSc in CSE/CS or Diploma in Computer Science",
         "Experience": "Atleast 2 years of experience with Software Testing and Quality Assurance"
 
+    },
+    {
+        "Id": 5,
+        "CompanyLogo": "https://images.unsplash.com/photo-1562705121-e624542c7b9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        "Position" : "Quality Assurance Engineer",
+        "CompanyName": "IBM",
+        "JobType": "Onsite",
+        "Location": "NewYork, USA",
+        "Salary":  "200k -250k",
+        "Phone": "+880 34743456",
+        "Email": "Taylor@ibm.NY.com",
+
+
+        "JobDescription": "Finds and fixes bugs in a product or program before its launch, collaborating with developers on fixes to those problems when necessary.",
+        "JobResponsibility" : "Find all errors and bugs with the system",
+        "Education": "BSc/MSc in CSE/CS , skilled people may receive peference ",
+        "Experience": "Atleast 2 years of experience with Quality Assurance Enginnering"
+
+    },
+    {
+        "Id": 6,
+        "CompanyLogo": "https://images.unsplash.com/photo-1491931648265-8f68c1dc731b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+        "Position" : "System Analyst",
+        "CompanyName": "Madcap",
+        "JobType": "Onsite",
+        "Location": "Melbourn, Australia",
+        "Salary":  "60k -80k",
+        "Phone": "+880 56474665",
+        "Email": "roberts@madcap.com",
+
+
+        "JobDescription": "Implement, maintain, and support IT and informations systems to meet the business needs of organizations and scale as organizations grow",
+        "JobResponsibility" : "Prepare documentation of current and future system",
+        "Education": "BSc/Msc in CSE or CS",
+        "Experience": "Atleast 2 years of experience as a system analyst"
+
     }
 ]

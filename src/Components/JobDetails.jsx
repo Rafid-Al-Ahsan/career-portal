@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-undef */
 
 /* eslint-disable no-unused-vars */
@@ -9,11 +10,15 @@ import { faEnvelope} from '@fortawesome/free-solid-svg-icons';
 import { faLocation} from '@fortawesome/free-solid-svg-icons';
 import { faCalendar} from '@fortawesome/free-solid-svg-icons';
 import { useParams } from 'react-router-dom';
+import { addToDb } from '../../utilities/fakedb';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const JobDetails = () => {
 
-    const [job, setJob] = useState();
+    const [job, setJob] = useState([]);
     const {id} = useParams();
 
     useEffect(() => {
@@ -23,11 +28,28 @@ const JobDetails = () => {
             const selectedJob = data.find(j=>j.Id.toString() === id)
             setJob(selectedJob);
         })
-    }, )
+    }, [])
+
+    const SendIdToLocal = (id) =>{
+        toast.success('Applied To Job Sucessfuly! Check the Applied-Jobs Page', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
+        addToDb(id);
+    }
+
+    console.log(useParams());
 
     return (
 
         <div className='w-full'>
+            <ToastContainer></ToastContainer>
            <div className='bg-primary text-black font-extrabold text-2xl py-20 text-center'>
               <h2>Job Details</h2>
            </div>
@@ -66,8 +88,9 @@ const JobDetails = () => {
              </div>
                
                 <div className='text-center mt-7'>
-                    <button className='bg-gradient-to-r from-gradient1 to-gradient2 w-full py-4 text-white'>Apply Now</button>
+                    <button  onClick={() => SendIdToLocal(id)}className='bg-gradient-to-r from-gradient1 to-gradient2 w-full py-4 text-white'>Apply Now</button>
                 </div> 
+
              </div>
             
            </div>

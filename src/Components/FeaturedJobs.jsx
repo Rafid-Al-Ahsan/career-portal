@@ -11,6 +11,11 @@ import { Link } from 'react-router-dom';
 const FeaturedJobs = (props) => {
 
     const [featuredJobs,setFeaturedJobs] = useState([]);
+
+    //Used for limiting the displayed featuredjob to four
+    const [dataLimit, setDataLimmit] = useState(true);
+    //Used for hidding and display Sell All Jobs button
+    const [showButton, setShowButton] = useState(true);
     
     // console.log(props);
 
@@ -20,6 +25,18 @@ const FeaturedJobs = (props) => {
         .then(response => response.json())
         .then(data => setFeaturedJobs(data))
     }, [])
+
+   
+    // Used for limit the displayed featured jobs to four
+    let sliceJob = [...featuredJobs];
+    if(dataLimit) sliceJob = sliceJob.slice(0,4);
+
+    //Used for showing all data, one the See All Jobs button is clicked
+    function displayAllData(){
+        setDataLimmit(false);
+        setShowButton(!showButton);
+    }
+   
 
     return (
        
@@ -36,11 +53,11 @@ const FeaturedJobs = (props) => {
           </div>
            
            <div className='grid md:grid-cols-2 sm:grid-cols-1 gap-7 mt-10'>
-              {featuredJobs.map(job => <Card key={job.Id} featuredJob={job} details={props}></Card>)}
+              {sliceJob.map(job => <Card key={job.Id} featuredJob={job} details={props}></Card>)}
            </div>
 
            <div className='text-center mt-5'>
-                <button className="btn bg-gradient-to-r from-gradient1 to-gradient2 text-white border-0 mt-3">See All Jobs</button>
+                {showButton && <button onClick={displayAllData} className="btn bg-gradient-to-r from-gradient1 to-gradient2 text-white border-0 mt-3">See All Jobs</button>}
             </div>
            
         </div>    
