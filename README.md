@@ -59,3 +59,8 @@ We welcome contributions to improve the JobPortal Frontend project. To contribut
 - Submit a pull request to the main repository.
 
 Please follow our code of conduct while contributing.
+
+## Live Web Application
+The live web application can be accessed through the following link.
+
+[CareerPortal-Frontend](https://rafid-al-ahsan-assignment-09.netlify.app/)
