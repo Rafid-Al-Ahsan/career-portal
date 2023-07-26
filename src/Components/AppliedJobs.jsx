@@ -1,41 +1,28 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { faDollarSign } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
-import image from '../assets/employee.png'
 import { getJobs } from '../../utilities/fakedb';
 import { useEffect, useState } from 'react';
 
 const AppliedJobs = () => {
 
+
     let jobs = getJobs();
-    const jobArray = [];
     const [appliedJobs, setAppliedJobs] = useState([]);
 
-
-   
-
     useEffect(() => {
+        const ids = Object.keys(jobs);
         fetch('featuredjobs.json')
         .then(response => response.json())
-        .then(data => setAppliedJobs(data))
+        .then(data => {
+            const filterJob = data.filter(i=> ids.includes(i.Id.toString()))
+            setAppliedJobs(filterJob)
+        })
     },[]);
        
-
-    for(const job in jobs){
-        const applied = appliedJobs.find(j=> j.Id === job);
-        jobArray.push(applied);
-        console.log(applied);
-    }
-         
-
-
-
-
-
-
-    
 
     return (
         <div className='w-full'>
@@ -44,17 +31,14 @@ const AppliedJobs = () => {
               <h2>Applied Jobs</h2>
            </div>
           
-          {/* {jobArray.map(job => <Card job={job}></Card>)} */}
-
+          {appliedJobs.map(j => <Card key ={j.Id} job={j}></Card>)}  
 
         </div>
-
-
 
     );
 };
 
-function Card(){
+function Card({job}){
     return(
         <div>
 
@@ -62,16 +46,16 @@ function Card(){
                 <div className='w-5/6 m-auto flex gap-10 justify-between items-center my-12 p-5 border-2 border-primary'>
                             <div className='flex gap-10'>
                                 <div>
-                                    <img src={image} className="w-32 h-40" alt="" />
+                                    <img src={job.CompanyLogo} className="w-32 h-40" alt="" />
                                 </div>
 
                                 <div className='flex flex-col gap-2'>
-                                    <h4 className='text-black text-lg font-semibold'>Technical Databse engineer</h4>
-                                    <p>Google LLc</p>
-                                    <p className='border-solid border-2 border-secondary text-secondary w-20 text-center py-2 my-2'>Remote</p>
+                                    <h4 className='text-black text-lg font-semibold'>{job.Position}</h4>
+                                    <p>{job.CompanyName}</p>
+                                    <p className='border-solid border-2 border-secondary text-secondary w-20 text-center py-2 my-2'>{job.JobType}</p>
                                         <div className='flex gap-5'>
-                                            <p><FontAwesomeIcon icon={faLocationDot} /> 15,000</p>
-                                            <p><FontAwesomeIcon icon={faDollarSign} />Salary: 15,000</p>
+                                            <p><FontAwesomeIcon icon={faLocationDot} /> {job.Location}</p>
+                                            <p>$ Salary: {job.Salary}</p>
                                         </div>
                                 </div>
                             </div>
