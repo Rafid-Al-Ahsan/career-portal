@@ -61,7 +61,7 @@ function Card({job}){
                             </div>
 
                             <div>
-                                <button className="btn bg-gradient-to-r from-gradient1 to-gradient2 text-white border-0 mt-3"><Link to="Jobdetails">View Details</Link></button>
+                                <Link to={`JobDetails`}><button className="btn bg-gradient-to-r from-gradient1 to-gradient2 text-white border-0 mt-3"><Link to="Jobdetails">View Details</Link></button></Link>
                             </div>
                         </div>
           
